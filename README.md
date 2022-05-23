@@ -26,6 +26,11 @@ Run `npm install`
 * Twitter:[@precious_akams](https://twitter.com/precious_akams)
 * LinkedIn:[Onyeagoziri Akams](https://www.linkedin.com/in/onyeagoziri-akams/)
 
+👤 Ishmael Kargbo
+
+* Github: [@IshmaelKargbo](https://github.com/IshmaelKargbo)
+
+
 ### 🤝 Contributing
 Contributions, issues, and feature requests are welcome!
 
