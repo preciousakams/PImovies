@@ -40,3 +40,12 @@
   width: 100%;
   font-weight: bold;
 }
+
+footer {
+  padding: 2% 0 2% 2%;
+  border-top: solid 3px;
+}
+
+footer a {
+  text-decoration: none;
+}
