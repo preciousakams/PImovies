@@ -69,9 +69,9 @@ const renderMovie = (allMovies) => {
       if (typeof liked === 'undefined') {
         spanLikes.innerHTML = '0 <i class="fa-regular fa-heart"></i>';
       } else if (liked.likes === 1) {
-        spanLikes.innerHTML = '1 <i class="fa-regular fa-heart"></i>';
+        spanLikes.innerHTML = '1 <i class="fa-solid fa-heart" style="color: red;"></i>';
       } else {
-        spanLikes.innerHTML = `${liked.likes} <i class="fa-regular fa-heart"></i>`;
+        spanLikes.innerHTML = `${liked.likes} <i class="fa-solid fa-heart" style="color: red;"></i>`;
       }
     };
     const getLikeFunction = () => {
