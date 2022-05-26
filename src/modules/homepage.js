@@ -1,28 +1,32 @@
 const row = document.querySelector('.row');
 
 const handleLike = async (e) => {
-  const id = e.target.previousElementSibling.previousElementSibling.innerText;
-  const postUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mFR5yoTrX10GbCKMVH4O/likes';
-  const newLikes = {
-    item_id: id,
-    likes: 1,
-  };
+  try {
+    const id = e.target.previousElementSibling.previousElementSibling.innerText;
+    const postUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mFR5yoTrX10GbCKMVH4O/likes';
+    const newLikes = {
+      item_id: id,
+      likes: 1,
+    };
 
-  const postResponse = await fetch(postUrl, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(newLikes),
-  });
-  const postData = await postResponse;
-  window.location.reload();
-  return postData;
+    const postResponse = await fetch(postUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newLikes),
+    });
+    const postData = await postResponse;
+    window.location.reload();
+    return postData;
+  } catch (error) {
+    return error;
+  }
 };
 const renderMovie = (allMovies) => {
   allMovies.forEach((movie) => {
     const col = document.createElement('div');
-    col.classList = 'col-md-4';
+    col.classList = 'col col-sm-6 col-md-4 col-lg-3';
     const movieImg = document.createElement('div');
     movieImg.classList = 'movieImg';
     const displayImg = document.createElement('img');
@@ -71,19 +75,27 @@ const renderMovie = (allMovies) => {
         spanLikes.innerHTML = `${liked.likes} <i class="fa-solid fa-heart" style="color: red;"></i>`;
       }
     };
-    const getLikeFunction = () => {
-      fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mFR5yoTrX10GbCKMVH4O/likes')
-        .then((resp) => resp.json())
-        .then((currentLikeData) => setLikeCounter(currentLikeData, id, spanLikes));
+    const getLikeFunction = async () => {
+      const likeUrl = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mFR5yoTrX10GbCKMVH4O/likes';
+      const likeResponse = await fetch(likeUrl);
+      const likeData = await likeResponse.json();
+      setLikeCounter(likeData, id, spanLikes);
     };
     getLikeFunction();
   });
 };
 const getMovies = async () => {
-  const url = 'https://api.tvmaze.com/search/shows?q=n';
-  const response = await fetch(url);
-  const data = await response.json();
-  renderMovie(data);
+  try {
+    const url = 'https://api.tvmaze.com/search/shows?q=n';
+    const response = await fetch(url);
+    const data = await response.json();
+    renderMovie(data);
+  } catch (error) {
+    return error;
+  }
+  return null;
 };
 
 getMovies();
+
+module.exports = renderMovie.setLikeCounter;

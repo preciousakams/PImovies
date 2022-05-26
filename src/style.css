@@ -37,12 +37,12 @@
 }
 
 .like-btn {
-  position: absolute;
+  position: relative;
   background-color: transparent;
-  padding: 1.2%;
+  padding: 20px;
   border: none;
   float: right;
-  margin-left: 24%;
+  left: 56px;
 }
 
 .comments {
