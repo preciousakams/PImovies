@@ -32,12 +32,12 @@ const renderMovie = (allMovies) => {
     displayImg.setAttribute('src', movie.show.image.medium);
     const title = document.createElement('p');
     title.classList = 'title';
-    title.innerHTML = `${movie.show.name} <i class="fa-regular fa-heart"></i>`;
+    title.innerHTML = `${movie.show.name}`;
     const spanDiv = document.createElement('div');
     spanDiv.classList = 'spanDiv';
     const spanLikes = document.createElement('span');
     spanLikes.classList = 'likes';
-    spanLikes.innerText = 'Likes';
+    spanLikes.innerHTML = '<i class="fa-regular fa-heart"></i>';
     const likeBtn = document.createElement('button');
     likeBtn.className = 'like-btn';
     likeBtn.addEventListener('click', handleLike);
@@ -48,31 +48,30 @@ const renderMovie = (allMovies) => {
     const comments = document.createElement('button');
     comments.classList = 'comments';
     comments.innerHTML = 'Comments';
-    const reservations = document.createElement('button');
-    reservations.classList = 'reserve';
-    reservations.innerHTML = 'Reservations';
+    const cardDiv = document.createElement('div');
+    cardDiv.classList = 'cardDiv';
 
     row.append(col);
-    col.append(movieImg);
+    col.append(cardDiv);
+    cardDiv.append(movieImg);
     movieImg.append(displayImg);
-    col.append(title);
-    col.append(spanDiv);
+    cardDiv.append(title);
+    cardDiv.append(spanDiv);
     spanDiv.append(id);
     spanDiv.append(spanLikes);
     spanDiv.append(likeBtn);
-    col.append(comments);
-    col.append(reservations);
+    cardDiv.append(comments);
 
     const setLikeCounter = (currentLikeData, id, spanLikes) => {
       const liked = currentLikeData.find(
         (element) => element.item_id === id.innerText,
       );
       if (typeof liked === 'undefined') {
-        spanLikes.innerText = '0 Likes';
+        spanLikes.innerHTML = '0 <i class="fa-regular fa-heart"></i>';
       } else if (liked.likes === 1) {
-        spanLikes.innerText = '1 like';
+        spanLikes.innerHTML = '1 <i class="fa-regular fa-heart"></i>';
       } else {
-        spanLikes.innerText = `${liked.likes} likes`;
+        spanLikes.innerHTML = `${liked.likes} <i class="fa-regular fa-heart"></i>`;
       }
     };
     const getLikeFunction = () => {
