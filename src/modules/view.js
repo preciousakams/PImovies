@@ -3,11 +3,9 @@ const closeBtn = document.getElementById('closeModal');
 const cardBody = document.getElementById('card-body');
 
 const renderViewModal = (movie) => {
-    modal.style.display = 'flex';
+  modal.style.display = 'flex';
 
-    console.log(movie);
-
-    cardBody.innerHTML = `
+  cardBody.innerHTML = `
         <div>
             <img src="${movie.show.image.original}" alt="">
             <h2 id="title">${movie.show.name}</h2>
@@ -23,14 +21,14 @@ const renderViewModal = (movie) => {
             </div>
         </div>
     `;
-}
+};
 
 const close = () => {
-    modal.style.display = 'none';
-}
+  modal.style.display = 'none';
+};
 
 closeBtn.addEventListener('click', close);
 
-module.exports =  {
-    renderViewModal
-}
+module.exports = {
+  renderViewModal,
+};

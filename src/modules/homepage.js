@@ -1,4 +1,4 @@
-const { renderViewModal } = require("./view");
+const { renderViewModal } = require('./view.js');
 
 const row = document.querySelector('.row');
 
@@ -28,7 +28,7 @@ const handleLike = async (e) => {
 const renderMovie = (allMovies) => {
   allMovies.forEach((movie) => {
     const col = document.createElement('div');
-    
+
     col.classList = 'col col-sm-6 col-md-4 col-lg-3';
     const movieImg = document.createElement('div');
     movieImg.classList = 'movieImg';
@@ -59,8 +59,7 @@ const renderMovie = (allMovies) => {
 
     cardDiv.addEventListener('click', () => {
       renderViewModal(movie);
-    })
-
+    });
 
     row.append(col);
     col.append(cardDiv);

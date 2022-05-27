@@ -1,7 +1,6 @@
 /**
  * @jest-environment jsdom
  */
-const setLikeCounter = require('./homepage.js');
 
 describe('counts the numbers of likes per item_id', () => {
   it('counts the numbers of likes per item_id', () => {
