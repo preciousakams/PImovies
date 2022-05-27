@@ -1,5 +1,40 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  padding: 2% 0 2% 2%;
+  border-bottom: solid 3px;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.header nav ul li a {
+  padding: 0 20px;
+  text-decoration: none;
+}
+
 .homePage {
-  padding: 5%;
+  padding: 12% 5% 5% 5%;
 }
 
 .cardDiv {
