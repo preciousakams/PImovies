@@ -181,9 +181,3 @@ form button {
 .close:hover {
   color: red;
 }
-
-.cardDiv {
-  border: solid rgb(212, 206, 206);
-  border-radius: 0 15% 0 10%;
-  margin: 5%;
-}
