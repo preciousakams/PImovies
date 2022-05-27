@@ -1,4 +1,5 @@
 const row = document.querySelector('.row');
+const { renderViewModal } = require('./view.js');
 
 const handleLike = async (e) => {
   try {
@@ -62,6 +63,10 @@ const renderMovie = (allMovies) => {
     spanDiv.append(spanLikes);
     spanDiv.append(likeBtn);
     cardDiv.append(comments);
+
+    comments.addEventListener('click', () => {
+      renderViewModal(movie);
+    });
 
     const setLikeCounter = (currentLikeData, id, spanLikes) => {
       const liked = currentLikeData.find(
