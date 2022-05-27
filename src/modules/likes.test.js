@@ -2,11 +2,9 @@
  * @jest-environment jsdom
  */
 
-let likeAll = require('./homepage.js');
-
 describe('counts the numbers of likes per item_id', () => {
   it('counts the numbers of likes per item_id', () => {
-    likeAll = [
+    const likeAll = [
       {
         likes: 2,
         item_id: '3245',
