@@ -85,6 +85,28 @@ body {
   object-fit: fill;
 }
 
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+
+form input, form textarea {
+  margin-bottom: 10px;
+}
+
+form button {
+  border: none;
+  background: rgb(10, 138, 250);
+  padding: 10px 0;
+  color: #fff;
+}
+
+.comment-title {
+  text-align: center;
+}
+
 .close {
   background: none;
   border: none;
