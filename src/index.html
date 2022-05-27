@@ -36,13 +36,15 @@
     <div class="card-movie">
       <button class="close" id="closeModal">X</button>
       <div id="card-body">
-
+        <h4 class="loading">Loading . . .</h4>
       </div>
-      <div>
+      <div id="comment-form">
         <h5 class="comment-title">Add a comment</h5>
-        <form>
-          <input type="text" placeholder="Your name" name="name">
-          <textarea name="insights" cols="30" rows="10" placeholder="insights"></textarea>
+        <form id="form">
+          <input type="hidden" id="hidden" name="item_id">
+          <input required type="text" placeholder="Your name" name="username">
+          <textarea required name="comment" cols="30" rows="10" placeholder="Your insights"></textarea>
+          <p id='loading-form'>Loading . . .</p>
           <button type="submit">Comment</button>
         </form>
       </div>

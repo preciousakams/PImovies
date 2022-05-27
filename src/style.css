@@ -164,6 +164,16 @@ form button {
   color: #fff;
 }
 
+.loading {
+  text-align: center;
+  color: rgb(107, 107, 107);
+  margin: 200px 0;
+}
+
+#comment-form {
+  display: none;
+}
+
 .comment-title {
   text-align: center;
 }
@@ -180,4 +190,26 @@ form button {
 
 .close:hover {
   color: red;
+}
+
+.comment h5 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.comment ul {
+  list-style: none;
+}
+
+.comment ul li {
+  margin-bottom: 3px;
+}
+
+.comment ul li p {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+#loading-form {
+  display: none;
 }
