@@ -99,4 +99,5 @@ closeBtn.addEventListener('click', close);
 
 module.exports = {
   renderViewModal,
+  fetchComment
 };
