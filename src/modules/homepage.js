@@ -98,4 +98,4 @@ const getMovies = async () => {
 
 getMovies();
 
-module.exports = renderMovie.setLikeCounter;
+module.exports = renderMovie.getLikeFunction;
