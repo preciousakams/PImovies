@@ -82,6 +82,10 @@ footer a {
   align-items: center;
 }
 
+.comment ul {
+  list-style: none;
+}
+
 .header nav ul {
   display: flex;
   list-style: none;
@@ -123,6 +127,11 @@ footer a {
 .view-movie .card-movie .details {
   display: flex;
   flex-wrap: wrap;
+}
+
+.comment ul li p {
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .view-movie .card-movie .details p {
@@ -197,17 +206,8 @@ form button {
   margin: 20px 0;
 }
 
-.comment ul {
-  list-style: none;
-}
-
 .comment ul li {
   margin-bottom: 3px;
-}
-
-.comment ul li p {
-  margin-bottom: 0;
-  padding: 0;
 }
 
 #loading-form {

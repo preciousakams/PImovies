@@ -1,23 +1,31 @@
 const modal = document.getElementById('view');
 const closeBtn = document.getElementById('closeModal');
 const cardBody = document.getElementById('card-body');
-const item_id = document.getElementById('hidden');
+const itemId = document.getElementById('hidden');
 const form = document.getElementById('form');
 const loadingForm = document.getElementById('loading-form');
 const commentForm = document.getElementById('comment-form');
 
 let movieCache = null;
 
-const renderViewModal = (movie) => {
+const fetchComment = async (id) => {
+  const res = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mFR5yoTrX10GbCKMVH4O/comments?item_id=${id}`);
 
+  if (res.status === 400) return null;
+
+  const data = await res.json();
+  return data;
+};
+
+const renderViewModal = (movie) => {
   movieCache = movie;
 
   modal.style.display = 'flex';
 
-  item_id.value = movie.show.id;
+  itemId.value = movie.show.id;
 
   fetchComment(movie.show.id)
-    .then(data => {
+    .then((data) => {
       cardBody.innerHTML = `
         <div>
             <img src="${movie.show.image.original}" alt="">
@@ -42,21 +50,20 @@ const renderViewModal = (movie) => {
     `;
       const commentList = document.getElementById('comment-list');
 
-      if (data)
-        data.forEach(comment => {
+      if (data) {
+        data.forEach((comment) => {
           const item = document.createElement('li');
           item.innerHTML = `<p>${comment.creation_date} ${comment.username}: ${comment.comment}</p>`;
           commentList.appendChild(item);
         });
+      }
 
-      commentForm.style.display = "block";
-    })
-
-
+      commentForm.style.display = 'block';
+    });
 };
 
 const addComment = async (form) => {
-  loadingForm.style.display = "block";
+  loadingForm.style.display = 'block';
   form.preventDefault();
 
   const data = Object.fromEntries(new FormData(form.target).entries());
@@ -66,31 +73,21 @@ const addComment = async (form) => {
     headers: {
       'Content-type': 'application/json',
     },
-    body: JSON.stringify({ item_id: data.item_id, comment: data.comment, username: data.username }),
+    body: JSON.stringify({ item_id: data.itemId, comment: data.comment, username: data.username }),
   });
 
-  loadingForm.style.display = "none";
-  commentForm.style.display = "none";
+  loadingForm.style.display = 'none';
+  commentForm.style.display = 'none';
   cardBody.innerHTML = "<h4 class='loading'>Loading . . .</h4>";
   renderViewModal(movieCache);
 
   form.target.reset();
-}
-
-const fetchComment = async (id) => {
-
-  const res = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/mFR5yoTrX10GbCKMVH4O/comments?item_id=${id}`);
-
-  if (res.status === 400)
-    return null;
-
-  return await res.json();
-}
+};
 
 form.addEventListener('submit', addComment);
 
 const close = () => {
-  commentForm.style.display = "none";
+  commentForm.style.display = 'none';
   cardBody.innerHTML = "<h4 class='loading'>Loading . . .</h4>";
   modal.style.display = 'none';
 };
@@ -99,5 +96,5 @@ closeBtn.addEventListener('click', close);
 
 module.exports = {
   renderViewModal,
-  fetchComment
+  fetchComment,
 };
