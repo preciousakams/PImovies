@@ -1,1 +1,69 @@
-/* stylelint-disable-next-line no-empty-source */
+.homePage {
+  padding: 5%;
+}
+
+.cardDiv {
+  border: solid rgb(212, 206, 206);
+  border-radius: 0 15% 0 10%;
+  margin: 5%;
+}
+
+.movieImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 15% 0 0;
+}
+
+.movieImg {
+  width: auto;
+}
+
+.title {
+  padding: 2% 7%;
+  font-weight: bold;
+}
+
+.fa-heart {
+  float: right;
+  font-size: 130%;
+  margin-left: 12px;
+}
+
+.likes {
+  float: right;
+  padding: 2% 7% 2% 0;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.like-btn {
+  position: relative;
+  background-color: transparent;
+  padding: 20px;
+  border: none;
+  float: right;
+  left: 56px;
+}
+
+.comments {
+  margin: 0 0 2% 10%;
+  padding: 2%;
+  font-weight: bold;
+  border: rgb(212, 206, 206);
+}
+
+.reserve {
+  margin: 0 48px 15px 0;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+
+footer {
+  padding: 2% 0 2% 2%;
+  border-top: solid 3px;
+}
+
+footer a {
+  text-decoration: none;
+}
