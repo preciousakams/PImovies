@@ -2,6 +2,8 @@
  * @jest-environment jsdom
  */
 
+import renderMovies from './homepage.js';
+
 describe('counts the numbers of likes per item_id', () => {
   it('counts the numbers of likes per item_id', () => {
     const likeAll = [
@@ -22,16 +24,17 @@ describe('counts the numbers of likes per item_id', () => {
         item_id: '44790',
       },
     ];
+    let setLike = renderMovies;
     const setLikeCounter = () => {
       const id = '44790';
       const testId2 = '3245';
       if (id === likeAll[3].item_id) {
-        const currentLikeData = likeAll[3].likes;
-        expect(currentLikeData).toBe(7);
+        setLike = likeAll[3].likes;
+        expect(setLike).toBe(7);
       }
       if (testId2 === likeAll[0].item_id) {
-        const currentLikeData = likeAll[0].likes;
-        expect(currentLikeData).toBe(2);
+        setLike = likeAll[0].likes;
+        expect(setLike).toBe(2);
       }
     };
     setLikeCounter();
