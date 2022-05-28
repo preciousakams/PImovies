@@ -1,0 +1,224 @@
+body {
+  font-family: Roboto, 'Courier New', Courier, monospace;
+}
+
+.homePage {
+  padding: 10% 5% 5% 5%;
+}
+
+.cardDiv {
+  border: solid rgb(212, 206, 206);
+  border-radius: 0 15% 0 10%;
+  margin: 5%;
+}
+
+.movieImg img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0 15% 0 0;
+}
+
+.movieImg {
+  width: auto;
+}
+
+.title {
+  padding: 2% 7%;
+  font-weight: bold;
+}
+
+.fa-heart {
+  font-size: 130%;
+  margin-left: 12px;
+}
+
+.fa-solid {
+  color: red;
+}
+
+.likes {
+  font-weight: bold;
+  font-size: 150%;
+}
+
+.like-btn {
+  background-color: transparent;
+  border: none;
+  float: right;
+}
+
+.comments {
+  margin: 0 0 2% 10%;
+  padding: 2%;
+  font-weight: bold;
+  border: rgb(212, 206, 206);
+}
+
+.reserve {
+  margin: 0 48px 15px 0;
+  display: block;
+  width: 100%;
+  font-weight: bold;
+}
+
+footer {
+  padding: 2% 0 2% 2%;
+  border-top: solid 3px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+.header {
+  padding: 2% 0 2% 2%;
+  border-bottom: solid 3px;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comment ul {
+  list-style: none;
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.header nav ul li a {
+  padding: 0 20px;
+  text-decoration: none;
+}
+
+.view-movie {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.708);
+  top: 0;
+  height: 100vh;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.view-movie .card-movie {
+  background: white;
+  width: 40%;
+  padding: 40px;
+  padding-top: 70px;
+  position: relative;
+  overflow-y: auto;
+}
+
+#view {
+  display: none;
+}
+
+.view-movie .card-movie .details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.comment ul li p {
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.view-movie .card-movie .details p {
+  width: 50%;
+}
+
+.view-movie .card-movie .description {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.view-movie .card-movie h2 {
+  text-align: center;
+  padding: 20px 0;
+}
+
+.view-movie .card-movie img {
+  height: 600px;
+  width: 100%;
+  object-fit: fill;
+}
+
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+}
+
+form input,
+form textarea {
+  margin-bottom: 10px;
+}
+
+form button {
+  border: none;
+  background: rgb(10, 138, 250);
+  padding: 10px 0;
+  color: #fff;
+}
+
+.loading {
+  text-align: center;
+  color: rgb(107, 107, 107);
+  margin: 200px 0;
+}
+
+#comment-form {
+  display: none;
+}
+
+.comment-title {
+  text-align: center;
+}
+
+.close {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 15px;
+  font-size: 18px;
+}
+
+.close:hover {
+  color: red;
+}
+
+.comment h5 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.comment ul li {
+  padding: 10px 0;
+  border-bottom: 1px dashed #cccc;
+}
+
+#loading-form {
+  display: none;
+}
+
+.comment-title,
+.title,
+.bold {
+  font-weight: bold;
+}
