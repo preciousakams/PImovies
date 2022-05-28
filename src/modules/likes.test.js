@@ -1,3 +1,7 @@
+/**
+ * @jest-environment jsdom
+ */
+
 describe('counts the numbers of likes per item_id', () => {
   it('counts the numbers of likes per item_id', () => {
     const likeAll = [

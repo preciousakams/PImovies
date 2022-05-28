@@ -24,25 +24,23 @@
 }
 
 .fa-heart {
-  float: right;
   font-size: 130%;
   margin-left: 12px;
 }
 
+.fa-solid {
+  color: red;
+}
+
 .likes {
-  float: right;
-  padding: 2% 7% 2% 0;
   font-weight: bold;
   font-size: 150%;
 }
 
 .like-btn {
-  position: relative;
   background-color: transparent;
-  padding: 20px;
   border: none;
   float: right;
-  left: 56px;
 }
 
 .comments {
