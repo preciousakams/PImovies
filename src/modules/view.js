@@ -94,7 +94,4 @@ const close = () => {
 
 closeBtn.addEventListener('click', close);
 
-module.exports = {
-  renderViewModal,
-  fetchComment,
-};
+export default renderViewModal;
