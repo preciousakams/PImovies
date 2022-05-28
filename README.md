@@ -13,7 +13,8 @@ An App for movie lovers to review and comment on there favourite movies
 ***
 Clone the repository to get a local copy
 From the cloned project directory
-Run `npm install`
+* Run `npm install` to setup and install all dependencies
+* Run `npm start` to run the project and render it on your default browser
 
 ### Prerequisites
 * Node.JS
