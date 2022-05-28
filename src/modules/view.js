@@ -73,7 +73,7 @@ const addComment = async (form) => {
     headers: {
       'Content-type': 'application/json',
     },
-    body: JSON.stringify({ item_id: data.itemId, comment: data.comment, username: data.username }),
+    body: JSON.stringify({ item_id: data.item_id, comment: data.comment, username: data.username }),
   });
 
   loadingForm.style.display = 'none';
