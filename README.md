@@ -20,15 +20,17 @@ Run `npm install`
 
 ### Authors
 ***
-👤 Onyeagoziri Precious Akams
+👤 **Onyeagoziri Precious Akams**
 
 * GitHub: [@kamzzy](https://github.com/kamzzy)
 * Twitter:[@precious_akams](https://twitter.com/precious_akams)
 * LinkedIn:[Onyeagoziri Akams](https://www.linkedin.com/in/onyeagoziri-akams/)
 
-👤 Ishmael Kargbo
+👤 **Ishmael Kargbo**
 
-* Github: [@IshmaelKargbo](https://github.com/IshmaelKargbo)
+- GitHub: [@githubhandle](https://github.com/ishmaelkargbo)
+- Twitter: [@twitterhandle](https://twitter.com/ishodev)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ishmael-kargbo-503660169)
 
 
 ### 🤝 Contributing
