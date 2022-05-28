@@ -1,3 +1,6 @@
+const row = document.querySelector('.row');
+const { renderViewModal } = require('./view.js');
+
 import { getLikeFunction, postLikeFunction } from './likes.js';
 
 const row = document.querySelector('.row');
