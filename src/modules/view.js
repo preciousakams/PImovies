@@ -31,11 +31,11 @@ const renderViewModal = (movie) => {
             <img src="${movie.show.image.original}" alt="">
             <h2 id="title">${movie.show.name}</h2>
             <div class="details">
-              <p><span>Language: </span><span>${movie.show.language}</span></p>
-              <p><span>Type: </span><span>${movie.show.type}</span></p>
-              <p><span>Premiered: </span><span>${movie.show.type}</span></p>
-              <p><span>Status: </span><span>${movie.show.status}</span></p>
-              <p><span>Genres: </span><span>${movie.show.genres.toString()}</span></p>
+              <p><span class="bold">Language: </span><span>${movie.show.language}</span></p>
+              <p><span class="bold">Type: </span><span>${movie.show.type}</span></p>
+              <p><span class="bold">Premiered: </span><span>${movie.show.type}</span></p>
+              <p><span class="bold">Status: </span><span>${movie.show.status}</span></p>
+              <p><span class="bold">Genres: </span><span>${movie.show.genres.toString()}</span></p>
             </div>
             <div class="comment">
               <h5>Comments (${data ? data.length : 0})</h5>
@@ -53,7 +53,7 @@ const renderViewModal = (movie) => {
       if (data) {
         data.forEach((comment) => {
           const item = document.createElement('li');
-          item.innerHTML = `<p>${comment.creation_date} ${comment.username}: ${comment.comment}</p>`;
+          item.innerHTML = `<p><span class="bold">${comment.creation_date} ${comment.username}:</span> ${comment.comment}</p>`;
           commentList.appendChild(item);
         });
       }

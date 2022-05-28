@@ -1,3 +1,7 @@
+body {
+  font-family: Roboto, 'Courier New', Courier, monospace;
+}
+
 .homePage {
   padding: 10% 5% 5% 5%;
 }
@@ -205,9 +209,16 @@ form button {
 }
 
 .comment ul li {
-  margin-bottom: 3px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #cccc;
 }
 
 #loading-form {
   display: none;
+}
+
+.comment-title,
+.title,
+.bold {
+  font-weight: bold;
 }
