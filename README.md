@@ -1,7 +1,7 @@
 # PImovies
-A Gallery of movies 
-
-## Demo version: []() 
+An App for movie lovers to review and comment on there favourite movies
+## Deployed version: [Click Here]() 
+## Demo video: [Click Here](https://drive.google.com/file/d/1hCEQAvIUPGN4a6tC6tJkyNMo3_4tuxGf/view?usp=sharing)
 
 ## Built With
 * HTML/CSS
