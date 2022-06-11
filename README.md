@@ -1,7 +1,7 @@
 # PImovies
 An App for movie lovers to review and comment on there favourite movies
-## Deployed version: [Click Here](https://kamzzy.github.io/PImovies/doc/index.html) 
-## Demo video: [Click Here](https://drive.google.com/file/d/1kWotNlSAL5a9kIHeffv4ftvK8XsHSph7/view?usp=sharing)
+## [Click For Live version](https://kamzzy.github.io/PImovies/doc/index.html) 
+## [Click For Demo video](https://drive.google.com/file/d/1kWotNlSAL5a9kIHeffv4ftvK8XsHSph7/view?usp=sharing)
 
 ## Built With
 * HTML/CSS
