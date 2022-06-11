@@ -6,14 +6,14 @@ module.exports = {
     main: path.resolve(__dirname, './src/index.js'),
   },
   output: {
-    path: path.resolve(__dirname, './doc'),
+    path: path.resolve(__dirname, './dist'),
     filename: '[name].bundle.js',
     clean: true,
   },
   mode: 'development',
   devServer: {
     static: {
-      directory: path.resolve(__dirname, './doc'),
+      directory: path.resolve(__dirname, './dist'),
     },
     open: true,
     compress: true,
