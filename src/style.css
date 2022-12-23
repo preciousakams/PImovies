@@ -72,13 +72,14 @@ footer a {
 
 .header {
   padding: 2% 0 2% 2%;
-  border-bottom: solid 3px;
+  border-bottom: solid 3px rgb(212, 206, 206);
   position: fixed;
   width: 100%;
   background: #fff;
 }
 
-.header nav {
+.header nav,
+.contact-header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -88,17 +89,20 @@ footer a {
   list-style: none;
 }
 
-.header nav ul {
+.header nav ul,
+.contact-header nav ul {
   display: flex;
   list-style: none;
 }
 
-.header nav a {
+.header nav a,
+.contact-header nav a {
   text-decoration: none;
   color: black;
 }
 
-.header nav ul li a {
+.header nav ul li a,
+.contact-header nav ul li a {
   padding: 0 20px;
   text-decoration: none;
 }
@@ -156,19 +160,19 @@ footer a {
   object-fit: fill;
 }
 
-form {
+.card-movie form {
   width: 50%;
   display: flex;
   flex-direction: column;
   margin: 10px auto;
 }
 
-form input,
-form textarea {
+.card-movie form input,
+.card-movie form textarea {
   margin-bottom: 10px;
 }
 
-form button {
+.card-movie form button {
   border: none;
   background: rgb(10, 138, 250);
   padding: 10px 0;
@@ -222,3 +226,29 @@ form button {
 .bold {
   font-weight: bold;
 }
+
+.contact {
+  border: solid rgb(212, 206, 206);
+  border-radius: 0 15% 0 10%;
+  padding: 2%;
+}
+
+.contact-head {
+  text-align: center;
+  padding: 20px 0;
+  font-weight: bold;
+}
+
+.contact form button {
+  background-color: red;
+  border: none;
+  margin-bottom: 24px;
+}
+
+.contact-header {
+  padding: 2% 0 2% 2%;
+  border-bottom: solid 3px rgb(212, 206, 206);
+  width: 100%;
+  margin-bottom: 5%;
+}
+
