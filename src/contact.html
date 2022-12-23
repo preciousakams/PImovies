@@ -24,32 +24,36 @@
     <div class="row justify-content-center">
       <div class="col-lg-9">
         <h1 class="mb-3 contact-head">Contact Us</h1>
-        <form>
+        <form action="https://formsubmit.co/6f76a1aab0d73d72ecef81f02d68a3ea"  method="post" role="form">
           <div class="row g-3">
             <div class="col-md-6">
               <label for="your-name" class="form-label">Your Name</label>
-              <input type="text" class="form-control" id="your-name" name="your-name" required>
+              <input type="text" class="form-control" id="your-name" name="name" required>
             </div>
             <div class="col-md-6">
               <label for="your-surname" class="form-label">Your Surname</label>
-              <input type="text" class="form-control" id="your-surname" name="your-surname" required>
+              <input type="text" class="form-control" id="your-surname" name="surname" required>
             </div>
             <div class="col-md-6">
               <label for="your-email" class="form-label">Your Email</label>
-              <input type="email" class="form-control" id="your-email" name="your-email" required>
+              <input type="email" class="form-control" id="your-email" name="email" required>
             </div>
             <div class="col-md-6">
               <label for="your-subject" class="form-label">Your Subject</label>
-              <input type="text" class="form-control" id="your-subject" name="your-subject">
+              <input type="text" class="form-control" id="your-subject" name="subject">
             </div>
             <div class="col-12">
               <label for="your-message" class="form-label">Your Message</label>
-              <textarea class="form-control" id="your-message" name="your-message" rows="5" required></textarea>
+              <textarea class="form-control" id="your-message" name="message" rows="5" required></textarea>
             </div>
+            <input type="hidden" name="_next" value="https://ubiquitous-bonbon-751a33.netlify.app/contactSubmit.html">
+              <input type="hidden" name="_subject" value="New submission!">
+              <input type="hidden" name="_template" value="table">
             <div class="col-12">
               <div class="row">
                 <div class="col-md-6">
-                  <button data-res="<?php echo $sum; ?>" type="submit" class="btn btn-dark w-100 fw-bold" >Send</button>
+
+                  <button type="submit" class="btn btn-dark w-100 fw-bold" >Get In Touch</button>
                 </div>
               </div>
             </div>
