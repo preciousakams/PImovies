@@ -1,5 +1,10 @@
-body {
+* {
+  color: #1a0f0b;
   font-family: Roboto, 'Courier New', Courier, monospace;
+}
+
+body {
+  background-color: #e5f0f4;
 }
 
 .homePage {
@@ -70,12 +75,21 @@ footer a {
   text-decoration: none;
 }
 
+.content a {
+  border: solid rgb(212, 206, 206);
+  text-decoration: none;
+  background-color: red;
+  color: #fff;
+  padding: 1%;
+  font-weight: bold;
+}
+
 .header {
   padding: 2% 0 2% 2%;
   border-bottom: solid 3px rgb(212, 206, 206);
   position: fixed;
   width: 100%;
-  background: #fff;
+  background: #e5f0f4;
 }
 
 .header nav,
@@ -98,13 +112,13 @@ footer a {
 .header nav a,
 .contact-header nav a {
   text-decoration: none;
-  color: black;
+  color: #1a0f0b;
+  font-weight: bold;
 }
 
 .header nav ul li a,
 .contact-header nav ul li a {
   padding: 0 20px;
-  text-decoration: none;
 }
 
 .view-movie {
@@ -174,7 +188,7 @@ footer a {
 
 .card-movie form button {
   border: none;
-  background: rgb(10, 138, 250);
+  background: red;
   padding: 10px 0;
   color: #fff;
 }
@@ -239,6 +253,11 @@ footer a {
   font-weight: bold;
 }
 
+.contact form {
+  font-weight: bold;
+  font-size: large;
+}
+
 .contact form button {
   background-color: red;
   border: none;
@@ -250,5 +269,25 @@ footer a {
   border-bottom: solid 3px rgb(212, 206, 206);
   width: 100%;
   margin-bottom: 5%;
+  font-size: large;
 }
 
+.contactResponse {
+  padding: 2% 0 2% 2%;
+  width: 100%;
+  margin: 6%;
+}
+
+.content {
+  padding: 2% 0 2% 2%;
+  width: 100%;
+  border: solid rgb(212, 206, 206);
+  border-radius: 0 15% 0 10%;
+  margin: 6%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.content h3 {
+  font-weight: bold;
+}
